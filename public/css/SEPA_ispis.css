@@ -1,0 +1,219 @@
+.greyBck {
+	border: 1px solid  #999999;
+	font: 11px Arial;; 
+	color: #333333; 
+}
+
+p, div, td {
+    color: #333333  !important;
+    line-height: 13px !important;
+    }
+table.greyBck, div.greyBck{
+	padding:5px 10px;
+	margin-bottom: 3px;
+}
+
+div.greyBck{
+	padding:10px 15px
+	margin-bottom: 3px;
+}
+
+table.greyBck td.bold {
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.borderBtm {
+	border-bottom: 1px solid #CCCCCC;
+}
+
+table.greyBck td {
+	padding:2px;
+	font-size: 11px;
+}
+
+/*.greyBck input{
+	font-weight:bold;
+}*/
+
+td.title{
+	font-size:14px !important;
+	color: #000000;
+}
+
+#bold, .boldPrikaz{
+	font-weight: bold;
+	font-size: 11px;
+}
+
+.boldBigPrikaz{
+ font-size: 13px !important;
+ font-weight: bold;
+ color: #555555;
+}
+
+.greyBck textbox, .greyBck select, .greyBck textarea, .greyBck input[type=text], .greyBck input.text {
+	border:1px solid #E2E2E2;
+	color: #555555;
+	font-weight:bold;
+}
+
+.greyBck label{
+	color: #777777;
+}
+
+.bold label {
+	color: #555555 !important;
+	font-weight: bold;
+	margin-top: 2px;
+	position: absolute;
+}
+
+.redBoldElement label, .redBoldElement label{
+	margin-top: 2px;
+}
+
+label.bold {
+color: #555555 !important;
+font-weight: bold;
+margin-top: 2px;
+}
+
+.boldPrikaz label, .boldBigPrikaz label {
+color: #555555 !important;
+font-weight: normal;
+font-size:11px;
+}
+
+.width100 {
+width: 100%;
+margin: 0px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+.greyBck select option{
+    color: #555;
+    font-weight: bold;
+}
+
+.greyBck .note {
+ vertical-align: middle !important; 
+}
+
+
+
+hr.grey {
+width: 100%;
+margin-top: 15px;
+border: 0;
+border-top: 1px solid #ccc;
+padding: 0px;
+}
+
+.podnaslovNew{
+	padding: 4px 0 4px;
+}
+.podnaslovNew .titleRed{
+	color:#E2001A;
+	font-weight:  bold;
+}.podnaslovNew .titleStandard{
+	color:#555555;
+	font-weight:  bold;
+}
+.sepaNote{
+	font-weight: bold;
+	color: #555;
+	font-size: 15px;
+	float: right;
+	display: none; 
+	background-color: #F5F5F5;
+	padding: 5px 20px;
+	border-bottom: 1px solid #E66161;	
+}
+
+table.greyBck	.sectionTitle {
+	font-weight: bold;
+}
+
+table.greyBck label {
+	/*margin: 3px 0;*/
+	display: inline-block;
+}
+
+table.greyBck .valutaLbl {
+	margin: 0 2px 0 5px;
+	font-weight: bold;
+	display: inline-block;
+}
+
+table.greyBck .yui-skin-sam .yui-button button {
+	min-height: !important 21px;
+}
+
+table.greyBck .horLine {
+	height: 1px;
+	width: 100%;
+	background-color: #ccc;
+	margin: 10px 0 0 0;
+}
+
+table.tableBankaSwift td {
+	padding: 0;
+}
+
+table.tableBankaSwift div {
+	padding: 2px;
+}
+
+table.greyBck .leftMargin {
+	margin-left: 5px;
+}
+
+
+
+table.greyBck .tdDataDiv {
+	display: inline-block;
+	vertical-align: top;
+}
+
+table.greyBck .inputSpinner {
+	display: none;
+	position: relative;
+	float: right;
+	margin-top: -18px;
+	margin-right: 5px;
+}
+input::-webkit-input-placeholder {
+color: #999 !important;
+font-weight: normal !important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+color: #999 !important; 
+font-weight: normal !important;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+color: #999 !important; 
+font-weight: normal !important;
+}
+input:-ms-input-placeholder { 
+color: #999 !important; 
+font-weight: normal !important;
+}
+
+
+/*select.greyfirst option:first-child*/
+option.greyfirst:selected
+{
+color: #999 !important; 
+font-weight: normal !important;
+}
+
+select.greyfirst{
+color: #999 !important; 
+font-weight: normal !important;
+}
+
+.redAlert {
+    color: #000000;
+}
