@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Racuni;
+use App\Models\Nalog;
 use Illuminate\Http\Request;
 
-class RacuniController extends Controller
+class NalogController extends Controller
 {
   /**
    * Display a listing of the resource.
@@ -14,9 +14,8 @@ class RacuniController extends Controller
    */
   public function index()
   {
-    $racuni = Racuni::all();
-    //dd($racuni);
-    return view('racuni.index')->with(compact('racuni'));
+    $nalozi = Nalog::all();
+    return view('nalozi.index')->with(compact('nalozi'));
   }
 
   /**
@@ -26,7 +25,7 @@ class RacuniController extends Controller
    */
   public function create()
   {
-    return view('racuni.create');
+    return view('nalozi.create');
   }
 
   /**
@@ -37,7 +36,6 @@ class RacuniController extends Controller
    */
   public function store(Request $request)
   {
-    //dd($request);
     $this->validate($request, [
       'iznos' => 'required',
       'poziv' => 'required',
@@ -45,48 +43,50 @@ class RacuniController extends Controller
       'referencija' => 'required',
       'naknada' => 'required'
     ]);
-    $racun = new Racuni;
-    $racun->iznos = $request->input('iznos') * 100;
-    $racun->opis = $request->input('opis') ?? null;
-    $racun->poziv = $request->input('poziv');
-    $racun->izvrsen = $request->input('izvrsen');
-    $racun->referencija = $request->input('referencija');
-    $racun->naknada = $request->input('naknada') ? $request->input('naknada')*100 : null;
-    $racun->save();
-    return redirect(route('racuni.show', $racun));
-
+    $nalog = new Nalog;
+    $nalog->iznos = $request->input('iznos') * 100;
+    $nalog->opis = $request->input('opis') ?? null;
+    $nalog->poziv = $request->input('poziv');
+    $nalog->izvrsen = $request->input('izvrsen');
+    $nalog->referencija = $request->input('referencija');
+    $nalog->naknada = $request->input('naknada') ? $request->input('naknada')*100 : null;
+    $nalog->save();
+    return redirect(route('nalozi.show', $nalog));
   }
 
   /**
    * Display the specified resource.
    *
-   * @param  \App\Models\Racuni  $racuni
+   * @param  \App\Models\Nalog  $nalog
    * @return \Illuminate\Http\Response
    */
-  public function show(Racuni $racuni)
+//  public function show(Nalog $nalog)
+  public function show($id)
   {
-    return view('racuni.show')->with(compact('racuni'));
+    //dd($id);
+    $nalog = Nalog::where('id', '=', $id)->first();
+    return view('nalozi.show')->with(compact('nalog'));
   }
 
   /**
    * Show the form for editing the specified resource.
    *
-   * @param  \App\Models\Racuni  $racuni
+   * @param  \App\Models\Nalog  $nalog
    * @return \Illuminate\Http\Response
    */
-  public function edit(Racuni $racuni)
+  public function edit(Nalog $nalog)
   {
-    return view('racuni.edit');
+    return view('nalozi.edit')->with(compact('nalog'));
   }
 
   /**
    * Update the specified resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
-   * @param  \App\Models\Racuni  $racuni
+   * @param  \App\Models\Nalog  $nalog
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Racuni $racuni)
+  public function update(Request $request, Nalog $nalog)
   {
     //
   }
@@ -94,10 +94,10 @@ class RacuniController extends Controller
   /**
    * Remove the specified resource from storage.
    *
-   * @param  \App\Models\Racuni  $racuni
+   * @param  \App\Models\Nalog  $nalog
    * @return \Illuminate\Http\Response
    */
-  public function destroy(Racuni $racuni)
+  public function destroy(Nalog $nalog)
   {
     //
   }

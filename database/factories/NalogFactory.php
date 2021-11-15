@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class RacuniFactory extends Factory
+class NalogFactory extends Factory
 {
     /**
      * Define the model's default state.

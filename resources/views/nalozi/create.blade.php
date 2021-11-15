@@ -1,12 +1,12 @@
 <x-guest-layout>
   <x-slot name="header">
     <h2>
-      {{ __('Novi račun') }}
+      {{ __('Novi nalog') }}
     </h2>
   </x-slot>
 
   <div>
-    <form method="POST" action="{{ route('racuni.store') }}">
+    <form method="POST" action="{{ route('nalozi.store') }}">
       @csrf
 
       <!-- iznos -->

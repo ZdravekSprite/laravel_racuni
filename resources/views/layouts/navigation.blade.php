@@ -6,7 +6,7 @@
       {{ __('Navigation') }}
     </div>
     <div>
-      <a href="{{ route('racuni.create') }}" title="Create">Create</a>
+      <a href="{{ route('nalozi.create') }}" title="Create">Create</a>
     </div>
   </div>
 </nav>

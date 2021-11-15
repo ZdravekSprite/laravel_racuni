@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\RacuniController;
+use App\Http\Controllers\NalogController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
   return view('welcome');
 });
-Route::resource('racuni', RacuniController::class);
+Route::resource('nalozi', NalogController::class);
