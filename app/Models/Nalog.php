@@ -7,8 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Nalog extends Model
 {
-    use HasFactory;
+  use HasFactory;
 
-    protected $table = 'nalozi';
-
+  protected $table = 'nalozi';
 }

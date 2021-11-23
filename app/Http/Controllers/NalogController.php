@@ -14,7 +14,7 @@ class NalogController extends Controller
    */
   public function index()
   {
-    $nalozi = Nalog::all();
+    $nalozi = Nalog::orderBy('izvrsen', 'desc')->get();
     return view('nalozi.index')->with(compact('nalozi'));
   }
 
@@ -65,7 +65,13 @@ class NalogController extends Controller
   {
     //dd($id);
     $nalog = Nalog::where('id', '=', $id)->first();
-    return view('nalozi.show')->with(compact('nalog'));
+    if (strtotime($nalog->izvrsen) < strtotime("2017-11-01 00:00:00")) {
+      return view('nalozi.show_v4')->with(compact('nalog'));
+    }
+    if (strtotime($nalog->izvrsen) < strtotime("2021-09-01 00:00:00")) {
+      return view('nalozi.show_v2')->with(compact('nalog'));
+    }
+    return view('nalozi.show_v1')->with(compact('nalog'));
   }
 
   /**
